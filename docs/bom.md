@@ -4,7 +4,7 @@ Names and quantities only. No links: these are all common parts.
 
 Cost: I built mine from parts I already had. If you buy everything new, it's roughly $100 (estimate).
 
-The same list is also in the YouTube video description: [VIDEO_URL]
+The same list is also in the YouTube video description: https://youtu.be/MyfvZeevY5c
 
 ## Mechanical
 
