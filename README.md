@@ -2,7 +2,7 @@
 
 A motorized camera slider with a 1050 mm slide (X) and a pan turntable, built from aluminum extrusion, bearings, screws, 2 stepper motors, 3D printed parts and off-the-shelf modules. Soldering is optional.
 
-Video: [VIDEO_URL]
+Video: https://youtu.be/MyfvZeevY5c
 
 **Cost:** I built it from parts I already had. If you buy everything new, it's **roughly $100 (estimate)**. You may already have some of the parts.
 
@@ -82,3 +82,4 @@ See [`docs/bom.md`](docs/bom.md) (names and quantities; no links, they are all c
 - The STL files, README, wiring diagram and G-code examples are licensed under **CC BY-NC-SA 4.0** (non-commercial). See [`LICENSE`](LICENSE).
 - **NOTICE:** GRBL firmware is used **unmodified** and remains © its authors under **GPLv3** (https://github.com/gnea/grbl). It is not included in this repository.
 - esp-link is used unmodified under its own license.
+
