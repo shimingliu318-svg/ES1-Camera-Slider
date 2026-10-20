@@ -1,0 +1,50 @@
+# GRBL 1.1 settings for the DIY Camera Slider (two axes: X = slide, Z = pan)
+# Board: Arduino Uno + CNC Shield V3, A4988 drivers at 1/16 microstep. Sender: Universal Gcode Sender (UGS), firmware type GRBL.
+# X = slide in mm. Z = pan in DEGREES (every "mm" on Z means degrees).
+# Only X and Z are used. The third driver socket stays empty; its settings stay at GRBL defaults.
+# Limit switches: 2 mechanical switches, normally open, one on the X limit port and one on the Z limit port (S + GND).
+# Homing: config.h homing cycle set to Z then X:
+#   #define HOMING_CYCLE_0 (1<<Z_AXIS)
+#   #define HOMING_CYCLE_1 (1<<X_AXIS)
+# After $H: X = 0 at the LEFT end; moving right gives NEGATIVE X (right end about -1030 on the original build).
+# $3, $4 and $6 were not recorded for the original build: set them to suit your wiring and switches.
+
+# --- Steps per mm (Z = steps per degree) ---
+# X: 200 x 16 / (20T x 2 mm) = 80
+# Z: 200 x 16 x 5 / 360 = 44.444 (16T:80T, 1:5). With a 20T drive pulley (1:4) use 35.556.
+$100=80
+$102=44.444
+
+# --- Max rate (mm/min; Z = deg/min) ---
+$110=12000
+$112=1800
+
+# --- Acceleration (mm/s^2; Z = deg/s^2) ---
+$120=400
+$122=100
+
+# --- Max travel ---
+$130=1050           # X max travel on the original build; measure your own rail
+$132=260            # Z soft limit span (+/-130 deg)
+
+# --- Limits & homing ---
+$20=1               # soft limits on
+$21=1               # hard limits on
+$22=1               # homing on
+$23=1               # X homes at the LEFT end
+$24=200
+$25=3000
+$26=25
+$27=10              # pull-off
+
+# $3: not recorded for the original build; set it to suit your wiring and switches
+# $4: not recorded for the original build; set it to suit your wiring and switches
+$5=0                # limit switches normally open
+# $6: not recorded for the original build; set it to suit your wiring and switches
+$10=1
+$11=0.020
+$12=0.002
+$13=0
+$30=1000
+$31=0
+$32=0
